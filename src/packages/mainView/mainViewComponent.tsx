@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { ExtensionSlot, SlotRenderer } from "repluggable";
 import { ContributedComponent } from "./mainViewAPI";
+import './mainViewComponent.css';
 
 type MainViewComponent = FunctionComponent<{slot: ExtensionSlot<ContributedComponent>}>
 

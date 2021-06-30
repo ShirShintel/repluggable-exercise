@@ -10,6 +10,6 @@ const slotItemToComp = ({component}: ContributedComponent) => component
 
 export const TopBar: TopBarComponent = ({slot}) => (
     <div className="topbar">
-         <SlotRenderer slot={slot} mapFunc={slotItemToComp}/>
+         <SlotRenderer slot={slot} mapFunc={slotItemToComp} />
     </div>
 );

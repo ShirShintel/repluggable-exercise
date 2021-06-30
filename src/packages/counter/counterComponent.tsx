@@ -2,14 +2,16 @@ import React, { FunctionComponent } from 'react';
 import './counterComponent.css';
 
 export const CounterView: FunctionComponent = () => (
-    <div className="counterView">
-        count will be shown here
+    <div className="container">
+        <div className="counterView">
+            0
+        </div>
     </div>
 );
 
 export const CounterButtons: FunctionComponent = () => (
-    <div >
-        <button>+</button>
+    <div className="container">
         <button>-</button>
+        <button>+</button>
     </div>
 );

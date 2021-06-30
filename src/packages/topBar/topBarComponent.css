@@ -1,4 +1,8 @@
 .topbar {
-    height: 100px;
-    background-color: red;
+    height: 120px;
+    background-color: #41B3A3;
+    display: flex;
+    align-items: center;
 }
+
+
