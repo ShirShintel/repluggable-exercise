@@ -1,0 +1,8 @@
+.counterView {
+    border: 1px solid black;
+    background-color: rgba(127, 255, 212, 0.746);
+    color: black;
+    padding: 10% 5%;
+    text-align: center;
+    max-width: fit-content;
+}
