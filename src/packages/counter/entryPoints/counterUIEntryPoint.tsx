@@ -1,5 +1,6 @@
 import { EntryPoint } from 'repluggable';
-import { CounterView , CounterButtons } from '../counterComponent';
+import { Displayer } from '../components/pure/displayer';
+import { Controls } from '../components/pure/controls'
 import { MainViewAPI } from "../../mainView";
 import { TopBarAPI } from '../../topBar/topBarAPI';
 
@@ -11,8 +12,8 @@ export const CounterUIEntryPoint: EntryPoint = {
     },
 
     extend(shell) {
-        shell.getAPI(MainViewAPI).contributeComponent(shell, {component: () => <CounterView/>});
-        shell.getAPI(TopBarAPI).contributeComponent(shell, {component: () => <CounterButtons/>});
+        shell.getAPI(MainViewAPI).contributeComponent(shell, {component: () => <Displayer/>});
+        shell.getAPI(TopBarAPI).contributeComponent(shell, {component: () => <Controls/>});
     }
 };
 
