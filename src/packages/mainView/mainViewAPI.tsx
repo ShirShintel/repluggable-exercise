@@ -1,4 +1,5 @@
 import { ReactComponentContributor, Shell, SlotKey } from 'repluggable';
+import { ContributedComponent } from '../types';
 
 export interface MainViewAPI {
     contributeComponent(fromShell: Shell, contribution: ContributedComponent): void
@@ -9,9 +10,6 @@ export const MainViewAPI: SlotKey<MainViewAPI> = {
     public: true,
 };
 
-export interface ContributedComponent {
-  component: ReactComponentContributor;
-}
 
 export const componentsSlotKey: SlotKey<ContributedComponent> = {
   name: 'contributedComponent',

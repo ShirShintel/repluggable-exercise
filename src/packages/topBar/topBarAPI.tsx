@@ -1,5 +1,5 @@
 import { Shell, SlotKey } from "repluggable";
-import { ContributedComponent } from "../../types";
+import { ContributedComponent } from "../types";
 
 export interface TopBarAPI {
   contributeComponent(

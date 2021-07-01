@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import "./topBarComponent.css";
 import { ExtensionSlot, SlotRenderer } from "repluggable";
-import { ContributedComponent } from "../../types";
+import { ContributedComponent } from "../types";
 
 type TopBarComponent = FunctionComponent<{
   slot: ExtensionSlot<ContributedComponent>;
