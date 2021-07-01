@@ -1,9 +1,14 @@
 import React, { FunctionComponent } from 'react';
 import './counterComponent.css';
 
-export const Controls: FunctionComponent = () => (
+interface Props {
+    incrementCounter: () => void;
+    decrementCounter: () => void;
+}
+
+export const Controls: FunctionComponent<Props> = (props) => (
     <div className="container">
-        <button>-</button>
-        <button>+</button>
+        <button onClick={props.decrementCounter}>-</button>
+        <button onClick={props.incrementCounter}>+</button>
     </div>
 );
