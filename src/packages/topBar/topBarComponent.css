@@ -1,8 +1,6 @@
 .topbar {
-    height: 120px;
-    background-color: #41B3A3;
-    display: flex;
-    align-items: center;
+  height: 120px;
+  background-color: #41b3a3;
+  display: flex;
+  align-items: center;
 }
-
-

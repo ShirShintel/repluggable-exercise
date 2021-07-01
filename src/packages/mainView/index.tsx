@@ -1,2 +1,2 @@
-export { MainViewAPI } from './mainViewAPI';
-export { MainViewPackage } from './mainViewPackage';
+export { MainViewAPI } from "./mainViewAPI";
+export { MainViewPackage } from "./mainViewPackage";

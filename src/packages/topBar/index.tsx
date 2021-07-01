@@ -1,1 +1,1 @@
-export { TopBarPackage } from './topBarPackage';
+export { TopBarPackage } from "./topBarPackage";

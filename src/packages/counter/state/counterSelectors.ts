@@ -1,22 +1,12 @@
-import { CounterState } from "./counterInitialState";
-
-
-export interface CounterSelectors {
-    getCount: () => number;
-}
-
-export interface CounterScopedState {
-    counter: CounterState
-}
-
+import { CounterState, CounterScopedState, CounterSelectors } from "./types";
 
 export function createCounterSelectors(
-    getState: () => CounterScopedState,
+  getState: () => CounterScopedState
 ): CounterSelectors {
-    const counterState = (): CounterState => getState().counter;
-    return {
-        getCount(){
-            return counterState().count;
-        }
-    }
+  const counterState = (): CounterState => getState().counter;
+  return {
+    getCount() {
+      return counterState().count;
+    },
+  };
 }

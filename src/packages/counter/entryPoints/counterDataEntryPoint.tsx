@@ -1,27 +1,20 @@
-import { EntryPoint } from 'repluggable';
+import { EntryPoint } from "repluggable";
 import { CounterAPI, createCounterAPI } from "../counterAPI";
-import { CounterScopedState } from '../state/counterSelectors';
-import { CounterReducer } from '../state/counterReducer'
+import { CounterScopedState } from "../state/types";
+import { CounterReducer } from "../state/counterReducer";
 
 export const CounterDataEntryPoint: EntryPoint = {
-    name: 'Counter Data Entry Point',
+  name: "Counter Data Entry Point",
 
-    // getDependencyAPIs() {
-    //     return [MainViewAPI,TopBarAPI];
-    // },
+  declareAPIs() {
+    return [CounterAPI];
+  },
 
-    declareAPIs() {
-        return [CounterAPI]
-    },
+  attach(shell) {
+    shell.contributeState<CounterScopedState>(() => ({
+      counter: CounterReducer,
+    }));
 
-    attach(shell) {
-        shell.contributeState<CounterScopedState>(() => ({
-            counter: CounterReducer
-        }));
-
-        shell.contributeAPI(CounterAPI, () => createCounterAPI(shell))
-    }
+    shell.contributeAPI(CounterAPI, () => createCounterAPI(shell));
+  },
 };
-
-
-

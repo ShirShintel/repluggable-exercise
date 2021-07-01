@@ -1,8 +1,5 @@
-
-export interface CounterState {
-    count: number
-}
+import { CounterState } from "./types";
 
 export const initialState: CounterState = {
-    count: 0
-}
+  count: 0,
+};
