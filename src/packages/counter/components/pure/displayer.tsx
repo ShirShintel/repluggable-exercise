@@ -1,16 +1,9 @@
-import React, { FunctionComponent } from 'react';
-import './counterComponent.css';
+import React, { FunctionComponent } from "react";
+import "./counterComponent.css";
+import { DisplayerProps } from "./types";
 
-
-interface Props {
-    count: number
-}
-
-
-export const Displayer: FunctionComponent<Props> = (props) => (
-    <div className="container">
-        <div className="displayer">
-            {props.count}
-        </div>
-    </div>
+export const Displayer: FunctionComponent<DisplayerProps> = (props) => (
+  <div className="container">
+    <div className="displayer">{props.count}</div>
+  </div>
 );
