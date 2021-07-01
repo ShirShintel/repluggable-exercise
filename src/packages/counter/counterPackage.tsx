@@ -1,20 +1,9 @@
-import { EntryPoint } from 'repluggable';
-import { CounterView , CounterButtons } from './counterComponent';
-import { MainViewAPI } from "../mainView";
-import { TopBarAPI } from '../topBar/topBarAPI';
+import { EntryPoint, hot } from 'repluggable';
 
-export const CounterPackage: EntryPoint[] = [{
-    name: 'Counter',
+import { CounterDataEntryPoint } from './entryPoints/counterDataEntryPoint';
+import { CounterUIEntryPoint } from './entryPoints/counterUIEntryPoint';
 
-    getDependencyAPIs() {
-        return [MainViewAPI,TopBarAPI];
-    },
-
-    extend(shell) {
-        shell.getAPI(MainViewAPI).contributeComponent(shell, {component: () => <CounterView/>});
-        shell.getAPI(TopBarAPI).contributeComponent(shell, {component: () => <CounterButtons/>});
-    }
-}];
-
-
-
+export const CounterPackage: EntryPoint[] = hot(module, [
+    CounterDataEntryPoint,
+    CounterUIEntryPoint
+]);
