@@ -1,10 +1,16 @@
 import React, { FunctionComponent } from 'react';
 import './counterComponent.css';
 
-export const Displayer: FunctionComponent = () => (
+
+interface Props {
+    count: number
+}
+
+
+export const Displayer: FunctionComponent<Props> = (props) => (
     <div className="container">
         <div className="displayer">
-            0
+            {props.count}
         </div>
     </div>
 );
