@@ -1,14 +1,9 @@
-import { FunctionComponent } from "react";
-import { ExtensionSlot, SlotRenderer } from "repluggable";
-import { ContributedComponent } from "../types";
-
-type MainViewComponent = FunctionComponent<{
-  slot: ExtensionSlot<ContributedComponent>;
-}>;
+import { SlotRenderer } from "repluggable";
+import { ComponentWithSlot, ContributedComponent } from "../types";
 
 const slotItemToComp = ({ component }: ContributedComponent) => component;
 
-export const MainViewComponent: MainViewComponent = ({ slot }) => (
+export const MainViewComponent: ComponentWithSlot = ({ slot }) => (
   <div>
     <SlotRenderer slot={slot} mapFunc={slotItemToComp} />
   </div>

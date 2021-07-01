@@ -1,15 +1,10 @@
-import { FunctionComponent } from "react";
 import "./topBarComponent.css";
-import { ExtensionSlot, SlotRenderer } from "repluggable";
-import { ContributedComponent } from "../types";
-
-type TopBarComponent = FunctionComponent<{
-  slot: ExtensionSlot<ContributedComponent>;
-}>;
+import { SlotRenderer } from "repluggable";
+import { ComponentWithSlot, ContributedComponent } from "../types";
 
 const slotItemToComp = ({ component }: ContributedComponent) => component;
 
-export const TopBar: TopBarComponent = ({ slot }) => (
+export const TopBar: ComponentWithSlot = ({ slot }) => (
   <div className="topbar">
     <SlotRenderer slot={slot} mapFunc={slotItemToComp} />
   </div>
