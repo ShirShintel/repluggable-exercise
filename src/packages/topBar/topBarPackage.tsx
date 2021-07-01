@@ -1,4 +1,3 @@
-import React from "react";
 import { EntryPoint } from "repluggable";
 import { TopBar } from "./topBarComponent";
 import { MainViewAPI } from "../mainView";
@@ -21,11 +20,9 @@ export const TopBarPackage: EntryPoint[] = [
     },
 
     extend(shell) {
-      shell
-        .getAPI(MainViewAPI)
-        .contributeComponent(shell, {
-          component: () => <TopBar slot={shell.getSlot(componentsSlotKey)} />,
-        });
+      shell.getAPI(MainViewAPI).contributeComponent(shell, {
+        component: () => <TopBar slot={shell.getSlot(componentsSlotKey)} />,
+      });
     },
   },
 ];
