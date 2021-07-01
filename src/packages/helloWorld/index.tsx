@@ -1,1 +1,0 @@
-export { HelloWorldPackage } from './helloWorldPackage';
